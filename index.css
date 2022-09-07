@@ -64,12 +64,35 @@ body {
     color: rgb(64, 64, 64);
     font-size: 2vw;
 }
-.form-check {
-
+.form-check-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
 }
-.form-chceck-check {
-
- }
+.form-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px !important;
+    background-color: rgb(64, 64, 64);
+    border: rgb(210, 245, 44) solid 3px;
+}
+.form-check-d {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
 .form-button {
     width: 80%;
     background-color: rgb(210, 245, 44);
