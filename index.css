@@ -15,20 +15,16 @@ body {
     text-align: left;
     scroll-snap-type: y mandatory;
 }
-.row {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    scroll-snap-align: center;
-}
 .col {
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
     width: 50vw;
-    height: 100vw;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
+    scroll-snap-align: center;
 }
 .l {
     grid-column-start: 1;
