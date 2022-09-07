@@ -1,6 +1,6 @@
 const MAX_IDX = 4;
 const MIN_IDX = 1;
-const TIMEOUT = 3000;
+const TIMEOUT = 1000;
 
 function promiseFactory(ms, i) {
     let promise = new Promise((resolve, reject) => {
