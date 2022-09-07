@@ -10,7 +10,10 @@ function promiseFactory(ms, i) {
 
     promise.catch(() => {
         console.log("===== TOUCHED =====");
-        addEventListener("touchend", () => promiseFactory(5000, i));
+        addEventListener("touchend", event => {
+            promiseFactory(5000, i);
+            console.log(event);
+        });
     });
 
     i++;
