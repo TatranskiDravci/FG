@@ -4,8 +4,7 @@ const TIMEOUT = 1000;
 const TIMEOUT_LONG = 10000 - TIMEOUT;
 let dead = false;
 
-function promiseFactory(ms, i, parent) {
-    console.log(i, parent);
+function promiseFactory(ms, i) {
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => { resolve(); console.log("----- RESOLVED -----"); }, ms);
         addEventListener("touchstart", () => { reject(); dead = true; });
@@ -18,7 +17,7 @@ function promiseFactory(ms, i, parent) {
             i = MIN_IDX;
         }
         document.getElementById("slide" + i).scrollIntoView({ behavior: 'smooth', block: 'center' });
-        promiseFactory(ms, i, parent + "-resolve-" + i);
+        promiseFactory(ms, i);
     })
     .catch(() => {
         console.log("----- DEAD -----");
@@ -28,10 +27,10 @@ function promiseFactory(ms, i, parent) {
 }
 
 console.log("===== SOURCED =====");
-promiseFactory(TIMEOUT, MIN_IDX, "source-1");
+promiseFactory(TIMEOUT, MIN_IDX);
 
 addEventListener("touchend", () => {
     if (dead) {
-        promiseFactory(TIMEOUT, MIN_IDX, "resurrected-1");
+        setTimeout(() => promiseFactory(TIMEOUT, MIN_IDX), TIMEOUT_LONG);
     }
 });
