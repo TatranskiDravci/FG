@@ -144,3 +144,7 @@ form {
     text-align: center;
     border: none;
 }
+
+.embed {
+    overflow: auto;
+}

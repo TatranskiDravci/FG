@@ -35,3 +35,32 @@ addEventListener("touchend", () => {
         promiseFactory(TIMEOUT, MIN_IDX, "resurrected-1")
     }
 });
+
+async function populate() {
+  const requestURL = 'profesia.json';
+  const request = new Request(requestURL);
+  const response = await fetch(request);
+  const profesia = await response.text();
+  const obj = JSON.parse(profesia);
+
+  const ul = document.getElementById("profesia_embed");
+
+  obj.forEach(item => {
+    let li = document.createElement("li");
+    let h = document.createElement("h1");
+    let p_loc = document.createElement("p");
+    let p_pay = document.createElement("p");
+
+    h.innerHTML = item.title;
+    p_loc.innerHTML = item.loc;
+    p_pay.innerHTML = item.pay;
+
+    li.append(h);
+    li.append(p_loc);
+    li.append(p_pay);
+
+    ul.append(li);
+  });
+}
+
+populate();
