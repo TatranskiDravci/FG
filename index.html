@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIRST Global</title>
     <link href="index.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <div class="grid">
@@ -26,17 +27,21 @@
                 <!-- TODO: add ref link -->
         </div>
         <div class="col l slide" id="slide3">
-                <img src="IMG_Porsche.png" alt="Porsche Werkzeugbau" class="logo">
-                <h1>Prihláste sa na odber noviniek</h1>
-                <form>
-                    <label class="form-label" for="mail">E-mail</label>
-                    <input class="form-input" type="text" placeholder="name@email.com" id="mail">
-                    <input class="form-check" type="checkbox" id="checkbox_fgsvk">
-                    <label class="form-check-label"for="checkbox_fgsvk" >Súhlasím so zasielaním newslettera First Global Slovakia</label>
-                    <input class="form-check" type="checkbox" id="checkbox_porshe">
-                    <label class="form-check-label" for="checkbox_porshe">Mám záujem o zasielanie pracovných ponúk Porshe Werkzeugbau na email</label>
-                    <input class="form-button" type="submit" value="Odoslať">
-                </form>
+            <img src="IMG_Porsche.png" alt="Porsche Werkzeugbau" class="logo">
+            <h1>Prihláste sa na odber noviniek</h1>
+            <form>
+                <label class="form-label" for="mail">E-mail</label>
+                <input class="form-input" type="email" placeholder="meno@email.com" id="mail">
+                <label class="form-check-label">Súhlasím so zasielaním newslettera First Global Slovakia
+                    <input class="form-check-d" type="checkbox" id="checkbox_fgsvk">
+                    <span class="form-check"></span>
+                </label>
+                <label class="form-check-label">Mám záujem o zasielanie pracovných ponúk Porshe Werkzeugbau na email
+                    <input class="form-check-d" type="checkbox" id="checkbox_porshe">
+                    <span class="form-check"></span>
+                </label>
+                <input class="form-button" type="submit" value="Odoslať">
+            </form>
         </div>
         <div class="col r">
                 <ul id="profesia_embed">
