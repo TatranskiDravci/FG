@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-rows: auto;
     grid-auto-columns: 50vw 50vw;
-    text-align: left;
+    text-align: center;
     scroll-snap-type: y mandatory;
 }
 .col {
@@ -37,4 +37,45 @@ body {
 .col:nth-child(4n+4),
 .col:nth-child(4n+1) {
     background-color: blueviolet;
+}
+.col * {
+    width: 80%;
+}
+#slide3 {
+    background-color: rgb(64, 64, 64);
+    align-items: flex-start;
+    padding: 0 10%;
+    color: white;
+}
+#slide3 * {
+    width: 100%;
+}
+.form {
+    text-align: left;
+}
+.form-label {
+    font-size: 1.3vw;
+}
+.form-input {
+    width: 80%;
+    background-color: rgb(210, 245, 44);
+    margin: 0.5vw 0 2.5vw 0;
+    padding: 1vw;
+    color: rgb(64, 64, 64);
+    font-size: 2vw;
+}
+.form-check {
+
+}
+.form-chceck-check {
+
+ }
+.form-button {
+    width: 80%;
+    background-color: rgb(210, 245, 44);
+    margin: 3vw 0 0 0;
+    padding: 1vw;
+    color: rgb(64, 64, 64);
+    font-size: 2vw;
+    text-align: center;
 }
