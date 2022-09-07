@@ -3,6 +3,7 @@ const MIN_IDX = 1;
 const TIMEOUT = 1000;
 
 function promiseFactory(ms, i) {
+    console.log(i);
     let promise = new Promise((resolve, reject) => {
         setTimeout(resolve, ms);
         addEventListener("touchstart", reject);
