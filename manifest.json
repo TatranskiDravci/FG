@@ -18,17 +18,17 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/?source=pwa",
+  "start_url": "/FG/?source=pwa",
   "background_color": "#3367D6",
   "display": "fullscreen",
-  "scope": "/",
+  "scope": "/FG/",
   "theme_color": "#241C5C",
   "shortcuts": [
     {
       "name": "FIRST Global Slovakia",
       "short_name": "FG Slovakia",
       "description": "Informácie o FIRST Global Slovakia",
-      "url": "/?source=pwa",
+      "url": "/FG/?source=pwa",
       "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
     },
     {
