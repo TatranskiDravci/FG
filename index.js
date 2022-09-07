@@ -1,6 +1,6 @@
 const MAX_IDX = 4;
 const MIN_IDX = 1;
-const TIMEOUT = 1000;
+const TIMEOUT = 3000;
 
 function promiseFactory(ms, i) {
     let promise = new Promise((resolve, reject) => {
@@ -9,7 +9,8 @@ function promiseFactory(ms, i) {
     });
 
     promise.catch(() => {
-        addEventListener("touchend", () => promiseFactory(10000, i));
+        console.log("===== TOUCHED =====");
+        addEventListener("touchend", () => promiseFactory(5000, i));
     });
 
     i++;
