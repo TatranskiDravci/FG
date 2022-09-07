@@ -50,12 +50,17 @@ body {
 #slide3 * {
     width: 100%;
 }
-.form {
+.logo {
+}
+.nadpis {
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin: 6vw 0 3vw;
+}
+form {
     text-align: left;
 }
-.form-label {
-    font-size: 1.3vw;
-}
+/*.form-label {font-size: 1.3vw;}*/
 .form-input {
     width: 80%;
     background-color: rgb(210, 245, 44);
@@ -65,26 +70,22 @@ body {
     font-size: 2vw;
 }
 .form-check-label {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
     position: relative;
-    padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.3vw;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     text-align: left;
 }
-.form-check {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px !important;
-    background-color: rgb(64, 64, 64);
-    border: rgb(210, 245, 44) solid 3px;
+.form-check-label:last-child {
+    margin-bottom: 0;
 }
 .form-check-d {
     position: absolute;
@@ -92,6 +93,25 @@ body {
     cursor: pointer;
     height: 0;
     width: 0;
+}
+.form-check {
+    position: relative;
+    height: 25px;
+    width: 25px !important;
+    background-color: rgb(64, 64, 64);
+    border: rgb(210, 245, 44) solid 5px;
+    transition: background-color 0.4s, border 0.4s;
+    transition-timing-function: ease;
+}
+.form-check-label:hover input ~ .form-check {
+    background-color: rgba(210, 245, 44, 0.8);
+    border: rgb(210, 245, 44) solid 0;
+}
+.form-check-label input:checked ~ .form-check {
+    background-color: rgb(210, 245, 44);
+}
+.form-check-text {
+    padding-left: 10px;
 }
 .form-button {
     width: 80%;
