@@ -16,4 +16,5 @@ function promiseFactory(ms, i) {
     return
 }
 
+console.log("===== SOURCED =====");
 promiseFactory(TIMEOUT, MIN_IDX);
