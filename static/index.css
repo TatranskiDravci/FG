@@ -125,11 +125,11 @@ form {
     border: rgb(210, 245, 44) solid 5px;
     transition: background-color 0.4s, border 0.4s;
     transition-timing-function: ease;
-}
+}/*
 .form-check-label:hover input ~ .form-check {
     background-color: rgba(210, 245, 44, 0.8);
     border: rgb(210, 245, 44) solid 0;
-}
+}*/
 .form-check-label input:checked ~ .form-check {
     background-color: rgb(210, 245, 44);
 }
@@ -144,7 +144,80 @@ form {
     text-align: center;
     border: none;
 }
-
 .embed {
-    overflow: auto;
+    position: relative;
+    padding: 0;
+}
+#profesia_embed {
+    display: flex;
+    padding: 0;
+    margin: 12vh 0 0;
+    overflow: scroll;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+.embed_topbar {
+    background-color: rgb(210, 245, 44);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    text-align: left;
+}
+.embed_topbar_title {
+    display: inline;
+    width: 70%;
+    padding-left: 25px;
+    font-size: 2vw;
+    font-weight: 600;
+}
+.embed_topbar_QR {
+    display: inline;
+    width: 30%;
+}
+#profesia_embed a {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+        "nadpis cena"
+        "popis cena";
+    position: relative;
+    width: 80%;
+    text-align: left;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 15px 25px;
+    -webkit-box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
+}
+#profesia_embed a:hover {
+    -webkit-box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.list_title {
+    grid-area: nadpis;
+    margin: 0 0 10px;
+}
+.list_loc {
+    grid-area: popis;
+}
+.list_money {
+    grid-area: cena;
+    color: rgb(210, 245, 44);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
