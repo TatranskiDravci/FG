@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-snap-type: y mandatory;
+}
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -14,7 +17,6 @@ body {
     grid-template-rows: auto;
     grid-auto-columns: 50vw 50vw;
     text-align: center;
-    scroll-snap-type: y mandatory;
 }
 .col {
     display: flex;
@@ -26,7 +28,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0 10%;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 .l {
     grid-column-start: 1;
@@ -49,6 +51,12 @@ body {
     line-height: 1.2;
     margin: 0;
     margin-bottom: 2vw;
+}
+.h2 {
+    font-size: 2vw;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
 }
 .h3 {
     font-size: 2vw;
@@ -184,7 +192,7 @@ form {
     display: inline;
     width: 30%;
 }
-#profesia_embed a {
+.embed_card {
     display: grid;
     grid-template-columns: 4fr 2fr;
     grid-template-rows: 2fr 1fr;
