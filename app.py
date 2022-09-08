@@ -17,6 +17,8 @@ def index():
 @app.route("/click")
 def click():
     print("clicked")
+
+    # db logger
     # call("tick db/click.count", shell=True)
     return ('', 200)
 

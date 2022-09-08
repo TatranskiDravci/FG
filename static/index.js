@@ -4,14 +4,23 @@ const MAX_IDX = 4;
 const MIN_IDX = 1;
 const TIMEOUT = 3000;
 const TIMEOUT_LONG = 10000 - TIMEOUT;
-let dead = false;
+let dead = 0;
 
 function promiseFactory(ms, i, parent) {
     console.log(i, parent);
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => { resolve(); console.log("----- RESOLVED -----"); }, ms);
-        addEventListener("touchstart", () => { reject(); console.log("----- REJECTED -----"); dead = true; });
-        
+        addEventListener("touchstart", () => { reject(); console.log("----- REJECTED: touchstart -----"); dead = 1; });
+        document.getElementById("mail").addEventListener("focusin", () => {
+            reject();
+            console.log("----- REJECTED: focus -----");
+            dead = 2;
+        }, true);
+        document.getElementById("mail").addEventListener("focus", () => {
+            reject();
+            console.log("----- REJECTED: focus -----");
+            dead = 2;
+        }, true);
     });
 
     promise
@@ -33,8 +42,16 @@ function promiseFactory(ms, i, parent) {
 promiseFactory(TIMEOUT, MIN_IDX, "source-1");
 
 addEventListener("touchend", () => {
+    if (dead == 1) {
+        promiseFactory(TIMEOUT, MIN_IDX, "resurrected-1");
+        dead = 0;
+    }
+});
+
+addEventListener("focusout", () => {
     if (dead) {
-        promiseFactory(TIMEOUT, MIN_IDX, "resurrected-1")
+        promiseFactory(TIMEOUT, MIN_IDX, "resurrected-1");
+        dead = 0;
     }
 });
 
