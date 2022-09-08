@@ -28,5 +28,5 @@ def form():
     else:
         cb_PS = 0
 
-    print(mail, cb_FG, cb_PS, file=form_DB)
+    # print(mail, cb_FG, cb_PS, file=form_DB)
     return redirect("/")
