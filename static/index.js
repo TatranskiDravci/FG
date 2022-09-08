@@ -1,3 +1,5 @@
+console.log("===== SOURCED =====");
+
 const MAX_IDX = 4;
 const MIN_IDX = 1;
 const TIMEOUT = 3000;
@@ -27,7 +29,6 @@ function promiseFactory(ms, i, parent) {
     return
 }
 
-console.log("===== SOURCED =====");
 promiseFactory(TIMEOUT, MIN_IDX, "source-1");
 
 addEventListener("touchend", () => {
@@ -59,9 +60,15 @@ async function populate() {
         li.append(p_loc);
         li.append(p_pay);
 
+        li.addEventListener("click", () => { 
+            fetch("/click").then(() => window.location.href = item.url);
+        });
+
         ul.append(li);
     });
 }
 
 populate();
+
+
 
