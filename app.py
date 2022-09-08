@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 from subprocess import call
-from flask_cors import cross_origin
 
 app = Flask(__name__)
 
@@ -16,7 +15,6 @@ def index():
 
 # tick click counter
 @app.route("/click")
-@cross_origin(origin="*")
 def click():
     print("clicked")
     # call("tick db/click.count", shell=True)

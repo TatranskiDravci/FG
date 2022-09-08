@@ -11,6 +11,7 @@ function promiseFactory(ms, i, parent) {
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => { resolve(); console.log("----- RESOLVED -----"); }, ms);
         addEventListener("touchstart", () => { reject(); console.log("----- REJECTED -----"); dead = true; });
+        
     });
 
     promise
