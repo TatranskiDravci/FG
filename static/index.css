@@ -291,4 +291,10 @@ form {
     -moz-box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
     box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
     transition: box-shadow 0.3s;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    color: white;
 }

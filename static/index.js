@@ -6,7 +6,7 @@ const TIMEOUT = 5000;
 const TIMEOUT_LONG = 10000 - TIMEOUT;
 let dead = 0;
 
-
+// ewwww
 function getNearestSlide() {
     return (
         ( 0                   <= window.pageYOffset && window.pageYOffset <   window.innerHeight) * 1 +
@@ -107,5 +107,8 @@ async function populate() {
 
 populate();
 
-
-
+document.querySelectorAll(".polls").forEach(item => {
+    item.addEventListener("click", event => {
+        fetch("/poll?num=" + encodeURIComponent(item.getAttribute("num")));
+    });
+});

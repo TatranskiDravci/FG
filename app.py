@@ -6,6 +6,11 @@ app = Flask(__name__)
 # open DBs
 form_DB = open("db/mail_log.feed", "a", 1)
 click_DB = open("db/click.count", "r+", 1)
+name_DB = {
+    "1": "db/name1.count",
+    "2": "db/name2.count",
+    "3": "db/name3.count"
+}
 
 
 # render index
@@ -19,8 +24,14 @@ def click():
     print("clicked")
 
     # db logger
-    # call("tick db/click.count", shell=True)
+    call("./tick db/click.count", shell=True)
     return ('', 200)
+
+@app.route("/poll")
+def poll():
+    num = request.args.get("num")
+    call("./tick " + name_DB[num], shell=True)
+    return redirect("/")    
 
 # save form into DB
 @app.route("/form", methods=["POST"])
@@ -40,5 +51,5 @@ def form():
         cb_PS = 0
 
     # db logger
-    # print(mail, cb_FG, cb_PS, file=form_DB)
+    print(mail, cb_FG, cb_PS, file=form_DB)
     return redirect("/")
