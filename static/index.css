@@ -81,7 +81,35 @@ body {
  }
 .blue-bg {
      background-color: #241C5C;
- }
+}
+.slide1 {
+    align-items: center;
+}
+#slide1_logo {
+    height: 10vh;
+    width: max-content;
+}
+.underQR {
+    text-decoration: none;
+    margin: 1vh;
+    font-size: 2vh;
+}
+#slide2 {
+    position: relative;
+}
+#slide2_bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url(IMG_FG_Tim.jpg);
+    background-position: center;
+    z-index: 0;
+}
+.z2 {
+    z-index: 2;
+}
 #slide3 {
     align-items: flex-start;
 }
@@ -191,6 +219,12 @@ form {
 .embed_topbar_QR {
     display: inline;
     width: 30%;
+    height: inherit;
+    text-align: right;
+}
+.embed_topbar_QR img {
+    width: unset;
+    height: 100%;
 }
 .embed_card {
     display: grid;
@@ -228,4 +262,33 @@ form {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+#slide4 {
+    background: url("IMG_FG_robot.jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+#slide4_l {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+.list_names {
+    display: block;
+    position: relative;
+    width: 80%;
+    text-align: left;
+    text-decoration: none;
+    margin: 15px 0;
+    padding: 15px 25px;
+    -webkit-box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 11px 20px 0 rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s;
 }

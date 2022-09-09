@@ -17,17 +17,18 @@
             <p class="h1">Staňte sa súčasťou slovenskej robotiky</p>
             <p class="h3">Podporte robotické talenty na stredných školách. Pomôžte im zakúpiť si robotické stavebnice a zúčastniť sa súťaží doma i v zahraničí.</p>
         </div>
-        <div class="col r blue-bg white">
-                <!-- TODO: add logo -->
-                <!-- TODO: add QR code -->
-                <!-- TODO: add ref link -->
+        <div class="col r slide1 blue-bg white">
+            <img id="slide1_logo" src="static/IMG_FG_SVK_white.png" alt="FIRST Global Slovakia">
+            <img id="slide1_QR" src="static/IMG_firstglobal.darujme.sk:fg2022_QR.png" alt="FIRST Global Slovakia">
+            <a class="underQR white" href="https://firstglobal.darujme.sk/fg2022/">firstglobal.darujme.sk/fg2022</a>
         </div>
-        <div class="col l slide" id="slide2">
-                <!-- TODO: add logo -->
+        <div class="col l slide" id="slide2" style="padding-right: 2%;">
+            <div id="slide2_bg"></div>
+            <img id="slide2_logo" class="z2" src="static/IMG_FG_SVK_white.png" alt="FIRST Global Slovakia">
         </div>
-        <div class="col r">
-                <!-- TODO: add QR code -->
-                <!-- TODO: add ref link -->
+        <div class="col r z2" style="padding-left: 2%">
+            <img id="slide2_QR" src="static/IMG_firstglobal.sk_QR.png" alt="FIRST Global Slovakia">
+            <a class="underQR white" href="https://firstglobal.sk/">firstglobal.sk</a>
         </div>
         <div class="col l slide grey-bg white" id="slide3">
             <img src="static/IMG_Porsche_S.png" alt="Porsche Werkzeugbau" class="logo">
@@ -52,7 +53,7 @@
             <div class="embed_topbar">
                 <div class="embed_topbar_title grey">Ponuky prace od Porsche Werkzeugbau s.r.o.</div>
                 <div class="embed_topbar_QR">
-                    <img src="static/IMG_profesia_QR.png" alt="profesia.sk" style="display: none;">
+                    <img src="static/IMG_profesia_QR.png" alt="profesia.sk">
                 </div>
             </div>
             <div id="profesia_embed" style="overflow: scroll">
@@ -60,15 +61,22 @@
             </div>
         </div>
         <div class="col l slide" id="slide4">
-            <div class="content">
-                <!-- TODO: add photo -- fill -->
-            </div>
+            <!--<img src="static/IMG_FG_robot.jpg" alt="ROBOT">-->
         </div>
-        <div class="col r">
-            <h1>Pomôžte nám vybrať meno pre robota</h1>
-            <button id="name1">Placeholder 1</button>
-            <button id="name2">Placeholder 2</button>
-            <button id="name3">Placeholder 3</button>
+        <div class="col r blue-bg white" id="slide4_l">
+            <div class="h1" style="padding-top: 2vw;">Pomôžte nám vybrať meno pre robota</div>
+            <div class="list_names" id="name1" style="display: block;background-color: #3F377B;">
+                <div class="list_title h1">Mikuláš Konček</div>
+                <div class="list_loc">Slovenský meteorológ a klimatológ<br>spoluzakľadateľ SHMÚ, navrhol index zavlažovania, konštrukciu galigrafu, je podľa neho nazvaný asteroid</div>
+            </div>
+            <div class="list_names" id="name2" style="display: block;background-color: #3F377B;">
+                <div class="list_title h1">Pavol Alexy</div>
+                <div class="list_loc">profesor Slovenskej technickej univerzity v Bratislave<br>Vývíja bioplast, ktorý má veľký úpech vo svete vďaka absoulútnej recyklácii</div>
+            </div>
+            <div class="list_names" id="name3" style="display: block;background-color: #3F377B;">
+                <div class="list_title h1">Ján Híveš</div>
+                <div class="list_loc">riaditeľ Ústavu anorganickej chémie, technológie a materiálov na STU v Bratislave<br>Vedec roka 2019 za výrobu silného zeleného oxidovadla</div>
+            </div>
         </div>
     </div>
     <script src="static/index.js"></script>
