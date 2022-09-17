@@ -12,7 +12,6 @@
     <link rel="manifest" href="static/manifest.json" crossorigin="use-credentials">
 </head>
 <body>
-    <div class="snackbar" id="voted">Ďakujeme za hlasovanie</div>
     <div class="grid">
         <div class="col l slide white-bg blue" id="slide1">
             <p class="h1">Staňte sa súčasťou slovenskej robotiky</p>
@@ -65,16 +64,17 @@
             <!--<img src="static/IMG_FG_robot.jpg" alt="ROBOT">-->
         </div>
         <div class="col r blue-bg white" id="slide4_l">
-            <div class="h1" style="padding-top: 2vw;">Pomôžte nám vybrať meno pre robota</div>
-            <button class="list_names polls" id="name1" num="1" style="display: block;background-color: #3F377B;">
+            <div class="snackbar h1" id="voted">Ďakujeme<br>za hlasovanie</div>
+            <div class="h1" style="padding-top: 2vw;" id="nadpisslide4">Pomôžte nám vybrať meno pre robota</div>
+            <button class="list_names polls" id="name1" num="1">
                 <div class="list_title h1">Mikuláš Konček</div>
                 <div class="list_loc">Slovenský meteorológ a klimatológ<br>spoluzakľadateľ SHMÚ, navrhol index zavlažovania, konštrukciu galigrafu, je podľa neho nazvaný asteroid</div>
             </button>
-            <button class="list_names polls" id="name2" num="2" style="display: block;background-color: #3F377B;">
+            <button class="list_names polls" id="name2" num="2">
                 <div class="list_title h1">Pavol Alexy</div>
                 <div class="list_loc">profesor Slovenskej technickej univerzity v Bratislave<br>Vývíja bioplast, ktorý má veľký úpech vo svete vďaka absoulútnej recyklácii</div>
             </button>
-            <button class="list_names polls" id="name3" num="3" style="display: block;background-color: #3F377B;">
+            <button class="list_names polls" id="name3" num="3">
                 <div class="list_title h1">Ján Híveš</div>
                 <div class="list_loc">riaditeľ Ústavu anorganickej chémie, technológie a materiálov na STU v Bratislave<br>Vedec roka 2019 za výrobu silného zeleného oxidovadla</div>
             </button>

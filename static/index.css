@@ -8,43 +8,6 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-.snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    background-color: rgba(0, 0, 0, .7);
-    color: #fff;
-    text-align: center;
-    border-radius: 30px;
-    padding: 10px 15px;
-    position: fixed;
-    z-index: 50;
-    left: 50%;
-    bottom: 70px;
-    font-size: 17px;
-    text-shadow: 0 0 15px #000000;
-    transform: translateX(-50%);
-}
-.snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein-info 0.5s, fadeout-info 0.5s 2.5s;
-    animation: fadein-info 0.5s, fadeout-info 0.5s 2.5s;
-}
-@-webkit-keyframes fadein-info {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 70px; opacity: 1;}
-}
-@keyframes fadein-info {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 70px; opacity: 1;}
-}
-@-webkit-keyframes fadeout-info {
-    from {bottom: 70px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-@keyframes fadeout-info {
-    from {bottom: 70px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
 .grid {
     width: 100%;
     height: 100%;
@@ -88,18 +51,21 @@ body {
     line-height: 1.2;
     margin: 0;
     margin-bottom: 2vw;
+    user-select: none;
 }
 .h2 {
     font-size: 2vw;
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
+    user-select: none;
 }
 .h3 {
     font-size: 2vw;
     font-weight: 400;
     line-height: 1.2;
     margin: 0;
+    user-select: none;
 }
 .blue {
     color: #241C5C;
@@ -208,6 +174,7 @@ form {
 }
 .form-check-text {
     padding-left: 10px;
+    user-select: none;
 }
 .form-button {
     background-color: rgb(210, 245, 44);
@@ -335,10 +302,37 @@ form {
     user-select: none;
     color: white;
     border: none;
+    background-color: #3F377B;
 }
-.list_names:hover {
-    color: yellow;
+.snackbar {
+    display: none;
+    font-size: 3.7vw;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 2vw;
 }
-.list_names:active {
-    color: orange;
+.snackbar.show {
+    display: block;
+    -webkit-animation: fadein-info 0.5s, fadeout-info 0.5s 2.5s;
+    animation: fadein-info 0.5s, fadeout-info 0.5s 2.5s;
+}
+@-webkit-keyframes fadein-info {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 70px; opacity: 1;}
+}
+@keyframes fadein-info {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 70px; opacity: 1;}
+}
+@-webkit-keyframes fadeout-info {
+    from {bottom: 70px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+@keyframes fadeout-info {
+    from {bottom: 70px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+.hide {
+    display: none !important;
 }

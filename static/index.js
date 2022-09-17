@@ -111,8 +111,22 @@ document.querySelectorAll(".polls").forEach(item => {
     item.addEventListener("click", event => {
         fetch("/poll?num=" + encodeURIComponent(item.getAttribute("num")));
         //document.getElementById("slide1").scrollIntoView({ behavior: 'auto', block: 'center' });
-        var x = document.getElementById("voted");
-        x.className = "snackbar show";
-        setTimeout(function(){ x.className = x.className.replace(" show", ""); }, 3000);
+        var bublinka = document.getElementById("voted");
+        var nadpis = document.getElementById("nadpisslide4");
+        var tlacitko1 = document.getElementById("name1");
+        var tlacitko2 = document.getElementById("name2");
+        var tlacitko3 = document.getElementById("name3");
+        bublinka.className = "snackbar show";
+        nadpis.className = "h1 hide";
+        tlacitko1.className = "list_names polls hide";
+        tlacitko2.className = "list_names polls hide";
+        tlacitko3.className = "list_names polls hide";
+        setTimeout(function(){
+                bublinka.className = bublinka.className.replace(" show", "");
+                nadpis.className = nadpis.className.replace(" hide", "");
+                tlacitko1.className = tlacitko1.className.replace(" hide", "");
+                tlacitko2.className = tlacitko2.className.replace(" hide", "");
+                tlacitko3.className = tlacitko3.className.replace(" hide", "");
+            }, 3000);
     });
 });

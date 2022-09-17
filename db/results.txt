@@ -1,9 +1,11 @@
 After ITAPA expo:
-    name1 - Mikulas - 31
-    name2 - Pavol   - 39
-    name3 - Jan     - 13
+    name1 - Mikulas  - 31
+    name2 - Pavol    - 39
+    name3 - Jan      - 13
+    click - Profesia - 17
 
 After Slovakia Tech:
-    name1 - Mikulas -
-    name2 - Pavol   -
-    name3 - Jan     -
+    name1 - Mikulas  -
+    name2 - Pavol    -
+    name3 - Jan      -
+    click - Profesia -
