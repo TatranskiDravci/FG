@@ -110,5 +110,9 @@ populate();
 document.querySelectorAll(".polls").forEach(item => {
     item.addEventListener("click", event => {
         fetch("/poll?num=" + encodeURIComponent(item.getAttribute("num")));
+        //document.getElementById("slide1").scrollIntoView({ behavior: 'auto', block: 'center' });
+        var x = document.getElementById("voted");
+        x.className = "snackbar show";
+        setTimeout(function(){ x.className = x.className.replace(" show", ""); }, 3000);
     });
 });

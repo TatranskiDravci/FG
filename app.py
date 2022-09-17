@@ -31,7 +31,7 @@ def click():
 def poll():
     num = request.args.get("num")
     call("./tick " + name_DB[num], shell=True)
-    return redirect("/")    
+    return redirect("/")
 
 # save form into DB
 @app.route("/form", methods=["POST"])
