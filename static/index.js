@@ -4,6 +4,7 @@ const MAX_IDX = 4;
 const MIN_IDX = 1;
 const TIMEOUT = 5000;
 const TIMEOUT_LONG = 10000 - TIMEOUT;
+const kill = new Event("kill");
 let dead = 0;
 
 // ewwww
@@ -22,6 +23,7 @@ function promiseFactory(ms, i, parent) {
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => { resolve(); console.log("----- RESOLVED -----"); }, ms);
         addEventListener("touchstart", () => { reject(); console.log("----- REJECTED: touchstart -----"); dead = 1; });
+        addEventListener("kill", () => { reject(); console.log("----- REJECTED: direct kill -----"); dead = 1; });
         document.getElementById("mail").addEventListener("focusin", () => {
             reject();
             console.log("----- REJECTED: focus -----");
@@ -111,6 +113,7 @@ document.querySelectorAll(".polls").forEach(item => {
     item.addEventListener("click", event => {
         fetch("/poll?num=" + encodeURIComponent(item.getAttribute("num")));
         //document.getElementById("slide1").scrollIntoView({ behavior: 'auto', block: 'center' });
+        dispatchEvent(kill);
         var bublinka = document.getElementById("voted");
         var nadpis = document.getElementById("nadpisslide4");
         var tlacitko1 = document.getElementById("name1");
@@ -121,12 +124,16 @@ document.querySelectorAll(".polls").forEach(item => {
         tlacitko1.className = "list_names polls hide";
         tlacitko2.className = "list_names polls hide";
         tlacitko3.className = "list_names polls hide";
-        setTimeout(function(){
+        setTimeout(() => {
                 bublinka.className = bublinka.className.replace(" show", "");
                 nadpis.className = nadpis.className.replace(" hide", "");
                 tlacitko1.className = tlacitko1.className.replace(" hide", "");
                 tlacitko2.className = tlacitko2.className.replace(" hide", "");
                 tlacitko3.className = tlacitko3.className.replace(" hide", "");
+                if (dead == 1) {
+                    setTimeout(promiseFactory(TIMEOUT, getNearestSlide(), "resurrected-" + getNearestSlide()), TIMEOUT_LONG);
+                    dead = 0;
+                }
             }, 3000);
     });
 });
