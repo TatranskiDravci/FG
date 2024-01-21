@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST Global</title>
+    <link href="static/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="manifest" href="static/manifest.json" crossorigin="use-credentials">
+</head>
+<body>
+    <div class="grid">
+        <div class="col l slide white-bg blue" id="slide1">
+            <p class="h1">Staňte sa súčasťou slovenskej robotiky</p>
+            <p class="h3">Podporte robotické talenty na stredných školách. Pomôžte im zakúpiť si robotické stavebnice a zúčastniť sa súťaží doma i v zahraničí.</p>
+        </div>
+        <div class="col r slide1 blue-bg white">
+            <img id="slide1_logo" src="static/IMG_FG_SVK_white.png" alt="FIRST Global Slovakia">
+            <img id="slide1_QR" src="static/IMG_firstglobal.darujme.sk:fg2022_QR.png" alt="FIRST Global Slovakia">
+            <a class="underQR white" href="https://firstglobal.darujme.sk/fg2022/">firstglobal.darujme.sk/fg2022</a>
+        </div>
+        <div class="col l slide" id="slide2" style="padding-right: 2%;">
+            <div id="slide2_bg"></div>
+            <img id="slide2_logo" class="z2" src="static/IMG_FG_SVK_white.png" alt="FIRST Global Slovakia">
+        </div>
+        <div class="col r z2" style="padding-left: 2%">
+            <img id="slide2_QR" src="static/IMG_firstglobal.sk_QR.png" alt="FIRST Global Slovakia">
+            <a class="underQR white" href="https://firstglobal.sk/">firstglobal.sk</a>
+        </div>
+        <div class="col l slide grey-bg white" id="slide3">
+            <img src="static/IMG_Porsche_S.png" alt="Porsche Werkzeugbau" class="logo">
+            <p class="nadpis">Prihláste sa na odber noviniek</p>
+            <form action="/form" method="post">
+                <!--<label class="form-label" for="mail">E-mail</label>-->
+                <input class="form-input grey" type="email" placeholder="meno@email.com" id="mail" name="mail">
+                <label class="form-check-label">
+                    <input class="form-check-d" type="checkbox" id="checkbox_fgsvk" name="checkbox_fgsvk">
+                    <span class="form-check grey-bg"></span>
+                    <span class="form-check-text">Súhlasím so zasielaním newslettera First Global Slovakia</span>
+                </label>
+                <label class="form-check-label">
+                    <input class="form-check-d" type="checkbox" id="checkbox_porshe" name="checkbox_porshe">
+                    <span class="form-check grey-bg"></span>
+                    <span class="form-check-text">Mám záujem o zasielanie pracovných ponúk Porshe Werkzeugbau na email</span>
+                </label>
+                <input class="form-button grey" type="submit" value="Odoslať">
+            </form>
+        </div>
+        <div class="col r embed">
+            <div class="embed_topbar">
+                <div class="embed_topbar_title grey">Ponuky práce od <br>Porsche Werkzeugbau s.r.o.</div>
+                <div class="embed_topbar_QR">
+                    <img src="static/IMG_profesia_QR.png" alt="profesia.sk">
+                </div>
+            </div>
+            <div id="profesia_embed" style="overflow: scroll">
+                <!-- Autogen embed: func populate() -->
+            </div>
+        </div>
+        <div class="col l slide" id="slide4">
+            <!--<img src="static/IMG_FG_robot.jpg" alt="ROBOT">-->
+        </div>
+        <div class="col r blue-bg white" id="slide4_l">
+            <div class="snackbar h1" id="voted">Ďakujeme<br>za hlasovanie</div>
+            <div class="h1" style="padding-top: 2vw;" id="nadpisslide4">Pomôžte nám vybrať meno pre robota</div>
+            <button class="list_names polls" id="name1" num="1">
+                <div class="list_title h1">Mikuláš Konček</div>
+                <div>Slovenský meteorológ a klimatológ, spoluzakľadateľ SHMÚ, navrhol index zavlažovania, konštrukciu galigrafu, je podľa neho nazvaný asteroid.</div>
+            </button>
+            <button class="list_names polls" id="name2" num="2">
+                <div class="list_title h1">Pavol Alexy</div>
+                <div>Profesor Slovenskej technickej univerzity v Bratislave. Vývíja bioplast, ktorý má veľký úpech vo svete vďaka absoulútnej recyklácii.</div>
+            </button>
+            <button class="list_names polls" id="name3" num="3">
+                <div class="list_title h1">Ján Híveš</div>
+                <div>Riaditeľ Ústavu anorganickej chémie, technológie a materiálov na STU v Bratislave. Vedec roka 2019 za výrobu silného zeleného oxidovadla.</div>
+            </button>
+        </div>
+    </div>
+    <script src="static/index.js"></script>
+    <script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+</body>
+</html>
